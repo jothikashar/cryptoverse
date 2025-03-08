@@ -1,0 +1,285 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1a1a1a; /* Dark background */
+  color: #e0e0e0; /* Light text */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  color: #ffcc00; /* Gold color for code */
+}
+
+/* src/pages/CryptoDashboard.css */
+.crypto-dashboard {
+  display: flex;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background-color: #1a1a1a; /* Dark background */
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #2a2a2a; /* Darker sidebar */
+  color: #e0e0e0; /* Light text */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-right: 1px solid #444444; /* Subtle border */
+}
+
+.sidebar h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #ffcc00; /* Gold accent */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 10px 0;
+  cursor: pointer;
+  color: #e0e0e0; /* Light text */
+  font-size: 16px;
+}
+
+.sidebar li:hover {
+  color: #ffcc00; /* Gold accent on hover */
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #1a1a1a; /* Dark background */
+}
+
+.global-stats {
+  background-color: #2a2a2a; /* Darker background */
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid #444444; /* Subtle border */
+}
+
+.global-stats h2 {
+  margin: 0 0 15px 0;
+  color: #ffcc00; /* Gold accent */
+  font-size: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 15px;
+  background-color: #333333; /* Slightly lighter background */
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item span {
+  color: #999999; /* Gray text */
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.stat-item strong {
+  font-size: 18px;
+  color: #e0e0e0; /* Light text */
+  font-weight: 600;
+}
+
+.top-cryptos {
+  background-color: #2a2a2a; /* Darker background */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid #444444; /* Subtle border */
+}
+
+.top-cryptos h2 {
+  margin: 0 0 15px 0;
+  color: #ffcc00; /* Gold accent */
+  font-size: 20px;
+}
+
+.crypto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.crypto-card {
+  border: 1px solid #444444; /* Subtle border */
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #333333; /* Slightly lighter background */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.crypto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(255, 204, 0, 0.2); /* Gold shadow */
+  border-color: #ffcc00; /* Gold accent */
+}
+
+.crypto-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffcc00; /* Gold accent */
+}
+
+.crypto-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  color: #e0e0e0; /* Light text */
+}
+
+.crypto-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #999999; /* Gray text */
+}
+
+.positive {
+  color: #00cc66; /* Green for positive values */
+  font-weight: bold;
+}
+
+.negative {
+  color: #ff6666; /* Red for negative values */
+  font-weight: bold;
+}
+
+.show-more {
+  background-color: #ffcc00; /* Gold accent */
+  color: #1a1a1a; /* Dark text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: block;
+  margin-left: auto;
+}
+
+.show-more:hover {
+  background-color: #ffdd33; /* Lighter gold on hover */
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #999999; /* Gray text */
+}
+
+.crypto-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #444444; /* Subtle border */
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #333333; /* Slightly lighter background */
+  color: #e0e0e0; /* Light text */
+}
+
+.search-bar:focus {
+  border-color: #ffcc00; /* Gold accent */
+  outline: none;
+}
+
+.stat-box {
+  background: #333333; /* Slightly lighter background */
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.stat-box h2 {
+  color: #ffcc00; /* Gold accent */
+  font-size: 22px;
+}
+
+.view-details {
+  text-decoration: none;
+  color: #1a1a1a; /* Dark text */
+  background: #ffcc00; /* Gold accent */
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.chart-container {
+  margin-top: 30px;
+  background: #2a2a2a; /* Darker background */
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #444444; /* Subtle border */
+}
+
+.chart-container h2 {
+  text-align: center;
+  color: #ffcc00; /* Gold accent */
+}
+
+.crypto-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+.label {
+  font-weight: bold;
+  color: #e0e0e0; /* Light text */
+  font-size: 14px;
+}
+
+.value {
+  font-size: 16px;
+  color: #ffffff; /* White text */
+  font-weight: bold;
+}
+
+.no-results {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+  color: #999999; /* Gray text */
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #ffcc00; /* Gold accent */
+}
